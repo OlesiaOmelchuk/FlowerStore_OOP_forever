@@ -1,0 +1,17 @@
+#GET http://localhost:8080/api/v1/flower
+#
+####
+#POST http://localhost:8080/api/v1/flower
+#Content-Type: application/json
+
+GET https://serene-falls-73644.herokuapp.com/api/v1/flower
+
+###
+POST https://serene-falls-73644.herokuapp.com/api/v1/flower
+Content-Type: application/json
+
+{
+  "color": 1,
+  "sepalLength": 700,
+  "price": 700
+}
