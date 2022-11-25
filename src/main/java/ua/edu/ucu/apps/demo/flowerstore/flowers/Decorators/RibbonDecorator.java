@@ -15,6 +15,6 @@ public class RibbonDecorator extends ItemDecorator{
 
     @Override
     public String getDescription() {
-        return item.getDescription() + "\nWith a beautiful ribbon";
+        return item.getDescription() + "With a beautiful ribbon.";
     }
 }

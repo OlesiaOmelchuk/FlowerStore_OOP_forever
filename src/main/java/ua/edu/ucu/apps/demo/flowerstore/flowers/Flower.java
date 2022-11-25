@@ -39,4 +39,9 @@ public class Flower extends Item {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String getDescription() {
+        return super.getDescription() + "A simple flower.";
+    }
 }
