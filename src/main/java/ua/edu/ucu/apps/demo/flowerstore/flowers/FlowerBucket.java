@@ -18,10 +18,10 @@ public class FlowerBucket extends Item {
     }
 
     @Override
-    public double price() {
+    public double getPrice() {
         price = 0;
         for (FlowerPack pack : packList) {
-            price += pack.price();
+            price += pack.getPrice();
         }
         return price;
     }

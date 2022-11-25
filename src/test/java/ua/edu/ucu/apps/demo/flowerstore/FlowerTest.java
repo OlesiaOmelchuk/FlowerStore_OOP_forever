@@ -23,7 +23,7 @@ public class FlowerTest {
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         flower.setPrice(price);
-        Assertions.assertEquals(price, flower.price());
+        Assertions.assertEquals(price, flower.getPrice());
     }
 
     @Test

@@ -22,7 +22,7 @@ public class Order {
     public double calculateTotalPrice() {
         double price = 0;
         for (Item item : items) {
-            price += item.price();
+            price += item.getPrice();
         }
         return price;
     }

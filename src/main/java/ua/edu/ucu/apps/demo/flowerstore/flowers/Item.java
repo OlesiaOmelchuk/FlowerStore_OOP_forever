@@ -7,5 +7,5 @@ public abstract class Item {
         return description;
     }
 
-    public abstract double price();
+    public abstract double getPrice();
 }

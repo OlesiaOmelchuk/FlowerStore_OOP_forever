@@ -12,7 +12,7 @@ public class FlowerPack extends Item {
         this.quantity = quantity;
     }
 
-    public double price() {
-        return flower.price() * quantity;
+    public double getPrice() {
+        return flower.getPrice() * quantity;
     }
 }

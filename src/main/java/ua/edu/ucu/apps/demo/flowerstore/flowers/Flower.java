@@ -18,39 +18,25 @@ import javax.persistence.Table;
 public class Flower extends Item {
     @Id @GeneratedValue
     private int id;
+    private FlowerColor color;
     @Getter
     private double sepalLength;
-    private FlowerColor color;
     private double price;
     @Getter
     private FlowerType flowerType;
 
-//    public Flower(int id,
-//                  double sepalLength,
-//                  FlowerColor color,
-//                  double price,
-//                  FlowerType flowerType) {
-//        this.id = id;
-//        this.sepalLength = sepalLength;
-//        this.color = color;
-//        this.price = price;
-//        this.flowerType = flowerType;
-//    }
-//
-//    public Flower() {
-//        this.id = 0;
-//        this.sepalLength = 0;
-//        this.color = null;
-//        this.price = 0;
-//        this.flowerType = null;
-//    }
+    public Flower(FlowerColor color, double length, double price){
+        this.color = color;
+        this.sepalLength = length;
+        this.price = price;
+    }
 
     public String getColor() {
         return color.toString();
     }
 
     @Override
-    public double price() {
+    public double getPrice() {
         return price;
     }
 }
