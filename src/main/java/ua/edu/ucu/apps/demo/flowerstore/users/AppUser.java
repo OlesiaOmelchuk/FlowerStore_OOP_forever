@@ -13,7 +13,7 @@ import java.time.Period;
 @Getter
 @Setter
 @NoArgsConstructor
-public class AppUser {
+public abstract class AppUser {
     @Id
     @GeneratedValue
     private int id;
@@ -26,7 +26,13 @@ public class AppUser {
     @Transient
     private int age;
 
+    public AppUser(String email, String dob) {
+        this.email = email;
+        this.dob = dob;
+    }
+
     public int getAge() {
         return Period.between(LocalDate.parse(dob), LocalDate.now()).getYears();
     }
+    public abstract void update(Status status);
 }
