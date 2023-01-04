@@ -17,13 +17,16 @@ public class AppUser {
     @Id
     @GeneratedValue
     private int id;
+
     @Column(unique = true)
     private String email;
-    private LocalDate dob;
+
+    private String dob;
+
     @Transient
-    private  int age;
+    private int age;
 
     public int getAge() {
-        return Period.between(dob, LocalDate.now()).getYears();
+        return Period.between(LocalDate.parse(dob), LocalDate.now()).getYears();
     }
 }
